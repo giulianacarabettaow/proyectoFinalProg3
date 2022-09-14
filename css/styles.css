@@ -1,4 +1,31 @@
 *{
     box-sizing: border-box;
 }
+header{
+    display: flex;
+    background-color:darksalmon;
+}
 
+
+main{
+    background-color: blanchedalmond;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    margin: 0px 5px ;
+}
+
+h2{
+    margin-left: 25px ;
+}
+
+footer{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
