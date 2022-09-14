@@ -1,21 +1,33 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(33, 15, 41);
+}
 header{
     display: flex;
-    background-color:darksalmon;
+    background-color: rgb(89, 0, 144);
 }
-
-
+.menuprincipal{
+    background-color: rgb(118, 78, 143);
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    
+}
 main{
-    background-color: blanchedalmond;
+    background-color: rgb(89, 0, 144);
 }
 
 ul{
     display: flex;
     justify-content: space-around;
-}
 
+}
+img{
+    height: 230px;
+}
 li{
     margin: 0px 5px ;
 }
@@ -25,7 +37,7 @@ h2{
 }
 
 footer{
-    background-color: antiquewhite;
+    background-color: rgb(89, 0, 144);
     display: flex;
     justify-content: center;
 }
