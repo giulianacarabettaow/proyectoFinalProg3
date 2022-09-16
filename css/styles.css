@@ -5,9 +5,13 @@ body{
     background-color: rgb(33, 15, 41);
 }
 header{
-    display: flex;
+    display: inline-block;
     background-color: rgb(89, 0, 144);
+    width: 100%;
 }
+
+
+
 .menuprincipal{
     background-color: rgb(118, 78, 143);
     height: fit-content;
