@@ -22,6 +22,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Bebas Neue', cursive;
 }
 h1{
    /*de esto se encarga nacho. hay que lograr que el titulo quede centrado dentro de su caja*/
