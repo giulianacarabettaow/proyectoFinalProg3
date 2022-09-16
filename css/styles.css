@@ -13,7 +13,7 @@ header{
 .contenedorpadre{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 .title{
     width: 150px;
