@@ -10,23 +10,34 @@ header{
     width: 100%;
     background-color: rgb(98, 15, 15);
 }
-
-.logo{
-    height: 50px;    
-}
-
-.imagen-logo{ 
+.contenedorpadre{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
-
+.title{
+    width: 150px;
+    margin:0%;
+    padding:0%;
+    justify-self: center;
+}
+h1{
+   /*de esto se encarga nacho. hay que lograr que el titulo quede centrado dentro de su caja*/
+}
 .menuprincipal{
     background-color: rgb(53, 5, 5);
     height: fit-content;
-    width: fit-content;
-    display: flex;
-    justify-content: space-between;
-    
+    width: 60%;
+}
+
+.home{
+    padding: 10px;
+}
+.genres{
+    padding: 10px;
+}
+.favorites{
+    padding: 10px;
 }
 main{
     background-color: rgb(98, 15, 15);
