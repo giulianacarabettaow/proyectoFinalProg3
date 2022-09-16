@@ -19,7 +19,9 @@ header{
     width: 150px;
     margin:0%;
     padding:0%;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h1{
    /*de esto se encarga nacho. hay que lograr que el titulo quede centrado dentro de su caja*/
@@ -39,6 +41,13 @@ h1{
 .favorites{
     padding: 10px;
 }
+
+.buscador{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 main{
     background-color: rgb(98, 15, 15);
 }
