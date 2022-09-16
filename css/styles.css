@@ -2,14 +2,14 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(33, 15, 41);
+    background-color: rgb(53, 5, 5);
 }
 header{
     display: flex;
-    background-color: rgb(89, 0, 144);
+    background-color: rgb(98, 15, 15);
 }
 .menuprincipal{
-    background-color: rgb(118, 78, 143);
+    background-color: rgb(53, 5, 5);
     height: fit-content;
     width: fit-content;
     display: flex;
@@ -17,7 +17,7 @@ header{
     
 }
 main{
-    background-color: rgb(89, 0, 144);
+    background-color: rgb(98, 15, 15);
 }
 
 ul{
@@ -37,7 +37,7 @@ h2{
 }
 
 footer{
-    background-color: rgb(89, 0, 144);
+    background-color:rgb(98, 15, 15);
     display: flex;
     justify-content: center;
 }
