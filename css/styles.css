@@ -1,14 +1,15 @@
 *{
     box-sizing: border-box;
 }
-body{
-    background-color: rgb(53, 5, 5);
-}
 
+.body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.9391106784510679) 0%, rgba(121,9,9,1) 0%, rgba(121,9,9,1) 0%, rgba(121,9,9,1) 0%, rgba(35,2,29,1) 30%, rgba(20,1,32,1) 47%, rgba(26,1,31,1) 63%, rgba(129,8,8,0.981127485173757) 100%, rgba(121,9,9,1) 100%, rgba(56,4,24,1) 100%, rgba(121,9,9,1) 100%, rgba(155,7,7,1) 100%, rgba(155,7,7,1) 100%);
+}
 header{
-    background-color: rgb(89, 0, 144);
+    
     width: 100%;
-    background-color: rgb(98, 15, 15);
+
 }
 .contenedorpadre{
     display: flex;
@@ -23,15 +24,28 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 h1{
-   /*de esto se encarga nacho. hay que lograr que el titulo quede centrado dentro de su caja*/
+    color: #EBEBEB; 
 }
+ 
+
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menuprincipal{
-    background-color: rgb(53, 5, 5);
     height: fit-content;
     width: 60%;
 }
 
+a{
+    text-decoration: none;
+    color: #B8B8B8;
+    
+}
 .home{
     padding: 10px;
 }
@@ -47,9 +61,20 @@ h1{
     justify-content: flex-end;
 }
 
+.placeholder{  
+    background-color: transparent;
+    border-radius: 37px 37px 37px 37px;
+    border: 0px solid #0f030f;
+}
 
-main{
-    background-color: rgb(98, 15, 15);
+.search{
+    border-radius: 37px 37px 37px 37px;
+    border: 2px solid #0f030f;
+}
+
+h2{
+    text-decoration: none;
+    color: #C2C2C2;
 }
 
 ul{
@@ -66,8 +91,19 @@ li{
 }
 
 h2{
+    color: #C2C2C2;
     margin-left: 25px ;
 }
+
+.section1{
+    border-radius: 37px 37px 37px 37px;
+    border: 2px solid #0f030f;
+    
+}
+
+
+
+
 
 footer{
     background-color:rgb(98, 15, 15);
