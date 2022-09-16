@@ -4,15 +4,21 @@
 body{
     background-color: rgb(53, 5, 5);
 }
+
 header{
-    display: inline-block;
     background-color: rgb(89, 0, 144);
     width: 100%;
-    display: flex;
     background-color: rgb(98, 15, 15);
 }
 
+.logo{
+    height: 50px;    
+}
 
+.imagen-logo{ 
+    display: flex;
+    justify-content: center;
+}
 
 .menuprincipal{
     background-color: rgb(53, 5, 5);
