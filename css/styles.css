@@ -95,15 +95,15 @@ li{
 .section1{
     border-radius: 37px 37px 37px 37px;
     border: 2px solid #0f030f;
-    
 }
-
+.mainDetalleMovie {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:  #EBEBEB;
+}
 .moviedetails{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    font-family: 'PT Sans Narrow', sans-serif;
-    color: white;
 }
 .sinopsis{
     width: 35%;
@@ -114,30 +114,23 @@ li{
 .interstellarscreen{
     width: 100%;
     height: 100%;
+    border-radius: 36px 36px 0px 0px;
+    border: 0px solid #0f030f;
 }
-
 
 .mainDetalleSerie{
     border-radius: 37px 37px 37px 37px;
     border: 2px solid #0f030f;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:  #EBEBEB;
 }
 
 .portadaSerie{
-        display: flex;
-        background-image: url(https://cnnespanol.cnn.com/wp-content/uploads/2020/11/the-crown-tres.jpg?quality=100&strip=info);
-        background-repeat: no-repeat;
-        height: 500px;
-        width: 100%;
-        border-radius: 36px 36px 0px 0px;
-        border: 0px solid #0f030f;
-}
+    width: 100%;
+    height: 100%;
+    border-radius: 36px 36px 0px 0px;
+   
 
-.nombrePortada{
-    padding-left: 210px;
-    padding-bottom: 90px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
 }
 
 .detalles{
@@ -151,12 +144,6 @@ li{
     padding-left: 5px;
     width: 50%;
 }
-
-.datosDeSerie ul{
-    padding: 0%;
-}
-
-
 
 p{
     color: #EBEBEB;
