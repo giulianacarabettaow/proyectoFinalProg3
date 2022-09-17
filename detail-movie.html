@@ -8,44 +8,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <title>Filmspot</title>
 </head>
-<body>
-        <header>
-        <img src="" alt="Logo">
-
-        <div>
-            <form action="search-results.html" method="GET">
-
-                <label>Buscador</label>
-                <input type="search" name="search" value="" placeholder="Búsqueda">
-
-            </form>
-        </div>
-
-        <h>Filmspot</h>
-
-                   <nav>
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./genres.html">Géneros</a></li>
-                    <li><a href="./favorite.html">Favoritos</a></li>
+<body class="body">
+    <header>
+        <section class="contenedorpadre">
+            <article class="title">
+                <h1>Filmspot</h1>
+            </article>
+            <nav class="menuprincipal">
+            <ul class="menu2">
+                    <li class="home"><a href="./index.html">HOME</a></li>
+                    <li class="genres"><a href="./genres.html">Géneros</a></li>
+                    <li class="favorites"><a href="./favorite.html">Favoritos</a></li>
                 </ul>
             </nav>
-        </header>
-
-        <article>
-            <h1>Nombre de la película</h1>
-                <h3>Género</h3>
-
-            <p>Sinópsis</p>
+            <article class="buscador">
+                <form action="search-results.html" method="GET">
+                    <input class="placeholder" type="search" name="search" value="" placeholder="¿Qué estás buscando?">
+                    <button class="search" type="submit">Buscar</button>
+                </form>
+            </article>
+        </section>   
+    </header>
+    <article>
+        <h2>Interstellar</h2> <!--cambio a h2 para que no se repita el h1 que ya esta en el header-->
+        <img src="./imagenes/interstellarscreen.jpg" class="interstellarscreen">
+    </article>
+    <article class="moviedetails">
+        <p class="sinopsis">Sinópsis:
+            Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí. La Tierra está llegando a su fin y este grupo necesita encontrar un planeta más allá de nuestra galaxia que garantice el futuro de la raza humana.</p>
+        
+        <ul>  <!-- cambiar el display a column-->
+            <li>Género: Épica, Drama, Ciencia Ficción</li>
+            <li>Calificación</li>
+            <li>Fecha de estreno</li>
             
-            <ul> <!-- cambiar el display a column-->
-                <li>Calificación</li>
-                <li>Fecha de estreno</li>
-                <li>Duración</li>
-                
-            </ul>
-        </article>
+        </ul>
+    </article>
 
 </body>
