@@ -102,8 +102,52 @@ h2{
     
 }
 
+.mainDetalleSerie{
+    border-radius: 37px 37px 37px 37px;
+    border: 2px solid #0f030f;
+}
+
+.portadaSerie{
+    display: flex;
+   background-image: url(https://cnnespanol.cnn.com/wp-content/uploads/2020/11/the-crown-tres.jpg?quality=100&strip=info);
+   height: 500px;
+   flex-wrap: nowrap;
+   border-radius: 36px 36px 0px 0px;
+    border: 0px solid #0f030f;
+}
+
+.nombrePortada{
+    padding-left: 210px;
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.detalles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sinopsis{
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    width: 50%;
+}
+
+.datosDeSerie ul{
+    padding: 0%;
+}
 
 
+p{
+    color: #EBEBEB;
+}
+
+li{
+    color: #C2C2C2;
+}
 
 
 footer{

@@ -10,26 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Filmspot</title>
 </head>
-<body>
+<body class="body">
         <header>
-        <img src="" alt="Logo">
-
-        <div>
-            <form action="search-results.html" method="GET">
-
-                <label>Buscador</label>
-                <input type="search" name="search" value="" placeholder="Búsqueda">
-
-            </form>
-        </div>
-
-        <h>Filmspot</h>
-
-                   <nav>
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./genres.html">Géneros</a></li>
-                    <li><a href="./favorite.html">Favoritos</a></li>
-                </ul>
-            </nav>
+            <section class="contenedorpadre">
+                <article class="title">
+                    <h1>Filmspot</h1>
+                </article>
+                <nav class="menuprincipal">
+                <ul class="menu2">
+                        <li class="home"><a href="./index.html">HOME</a></li>
+                        <li class="genres"><a href="./genres.html">Géneros</a></li>
+                        <li class="favorites"><a href="./favorite.html">Favoritos</a></li>
+                    </ul>
+                </nav>
+                <article class="buscador">
+                    <form action="search-results.html" method="GET">
+                        <input class="placeholder" type="search" name="search" value="" placeholder="¿Qué estás buscando?">
+                        <button class="search" type="submit">Buscar</button>
+                    </form>
+                </article>
+            </section>   
         </header>
+       
