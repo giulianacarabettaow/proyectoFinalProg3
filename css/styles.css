@@ -97,6 +97,14 @@ li{
     border: 2px solid #0f030f;
 }
 
+.nombreDelElemento{
+    margin: 0%;
+}
+
+h3{
+    margin: 0%;
+}
+
 .mainhead{
     display: flex;
     justify-content: space-between;
