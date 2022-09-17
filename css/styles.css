@@ -108,12 +108,13 @@ h2{
 }
 
 .portadaSerie{
-    display: flex;
-   background-image: url(https://cnnespanol.cnn.com/wp-content/uploads/2020/11/the-crown-tres.jpg?quality=100&strip=info);
-   height: 500px;
-   flex-wrap: nowrap;
-   border-radius: 36px 36px 0px 0px;
-    border: 0px solid #0f030f;
+        display: flex;
+        background-image: url(https://cnnespanol.cnn.com/wp-content/uploads/2020/11/the-crown-tres.jpg?quality=100&strip=info);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+        border-radius: 36px 36px 0px 0px;
+        border: 0px solid #0f030f;
 }
 
 .nombrePortada{
