@@ -178,9 +178,26 @@ li{
     color: #C2C2C2;
 }
 
+.mainfavorite{
+    display: flex;
+    justify-content: space-around;
+}
+
+.favoritesection{
+    border: solid #C2C2C2;
+    width: 50%;
+    border-radius: 36px 36px 0px 0px;
+}
+
+.favoritelist{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 footer{
     background-color:rgb(98, 15, 15);
     display: flex;
     justify-content: center;
+    
 }
