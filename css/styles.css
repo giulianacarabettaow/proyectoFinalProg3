@@ -46,8 +46,8 @@ a{
     text-decoration: none;
     color: #B8B8B8;
     font-family: 'PT Sans Narrow', sans-serif;
-    
 }
+
 .home{
     padding: 10px;
 }
@@ -188,6 +188,12 @@ li{
     border-radius: 36px 36px 0px 0px;
 }
 
+.genresection{
+    border: solid #0f030f;
+    width: 50%;
+    border-radius: 36px 36px 0px 0px;
+    background-color: #361B30;
+}
 
 .favoritelist{
     display: flex;
@@ -207,17 +213,34 @@ li{
 .genrearticle{
     display: flex;
     justify-content: center;
-    background-color: #181F25;
 }
 
 .item{
-    margin:5px
+    margin: 25px;   
+}
+
+.titleDetailGenre{
+        display: flex;
+        justify-content: center;
+        color: #C2C2C2;
+        font-size: larger;
+}
+
+.detailGenreSection{
+    border: solid #0f030f;
+    width: 100%;
+    border-radius: 36px 36px 0px 0px;
+}
+
+.subTitleGenre{
+    font-size: medium;
 }
 
 
-
 footer{
-
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
 }
 
 
