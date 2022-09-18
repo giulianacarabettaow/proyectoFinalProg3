@@ -180,7 +180,6 @@ li{
 
 .mainfavorite{
     display: flex;
-    justify-content: space-around;
 }
 
 .favoritesection{
@@ -189,6 +188,7 @@ li{
     border-radius: 36px 36px 0px 0px;
 }
 
+
 .favoritelist{
     display: flex;
     justify-content: space-around;
@@ -196,21 +196,23 @@ li{
 }
 
 .genrelist{
-    background-color: #181F25;
-    padding: 0%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column  ;
+    padding: 0%;
     list-style: circle;
-}
-
-.genrelist2{
-    background-color: #181F25;
-    padding: 0%;
-    display: flex;
-    flex-direction: column-reverse;
+    margin: 0%;
     
 }
 
+.genrearticle{
+    display: flex;
+    justify-content: center;
+    background-color: #181F25;
+}
+
+.item{
+    margin:5px
+}
 
 
 
