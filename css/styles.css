@@ -188,11 +188,20 @@ li{
     border-radius: 36px 36px 0px 0px;
 }
 
-.genresection{
+.genresectionPeliculas{
     border: solid #0f030f;
     width: 50%;
     border-radius: 36px 36px 0px 0px;
     background-color: #361B30;
+    background-image: url(https://cdn.pixabay.com/photo/2018/04/20/01/07/spaceship-3334826_960_720.jpggit );
+}
+
+.genresectionSeries{
+    border: solid #0f030f;
+    width: 50%;
+    border-radius: 36px 36px 0px 0px;
+    background-color: #361B30;
+    background-image: url(https://cdn.pixabay.com/photo/2016/04/14/13/06/landscape-1328858_960_720.jpg);
 }
 
 .favoritelist{
