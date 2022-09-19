@@ -104,6 +104,7 @@ h3{
     font-family: 'PT Sans Narrow', sans-serif;
     
 }
+/*/esta clase esta mal escrita y repetida, está dos clases arriba. Podemos unificar/*/
 section.section1{
     font-family: 'PT Sans Narrow', sans-serif;
 }
