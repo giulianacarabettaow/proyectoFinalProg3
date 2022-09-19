@@ -101,6 +101,11 @@ li{
 
 h3{
     margin: 0%;
+    font-family: 'PT Sans Narrow', sans-serif;
+    
+}
+section.section1{
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .mainhead{
@@ -175,14 +180,16 @@ h3{
 
 p{
     color: #EBEBEB;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 li{
     color: #C2C2C2;
 }
 
-.mainfavorite{
+main.mainfavorite{
     display: flex;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .favoritesection{
@@ -230,7 +237,9 @@ li{
 .item{
     margin: 25px;   
 }
-
+section.detailGenreSection{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
 .titleDetailGenre{
         display: flex;
         justify-content: center;
