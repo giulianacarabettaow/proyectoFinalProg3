@@ -7,9 +7,7 @@
     background: linear-gradient(90deg, rgba(2,0,36,0.9391106784510679) 0%, rgba(121,9,9,1) 0%, rgba(121,9,9,1) 0%, rgba(121,9,9,1) 0%, rgba(35,2,29,1) 30%, rgba(20,1,32,1) 47%, rgba(26,1,31,1) 63%, rgba(129,8,8,0.981127485173757) 100%, rgba(121,9,9,1) 100%, rgba(56,4,24,1) 100%, rgba(121,9,9,1) 100%, rgba(155,7,7,1) 100%, rgba(155,7,7,1) 100%);
 }
 header{
-    
     width: 100%;
-
 }
 .contenedorpadre{
     display: flex;
@@ -151,6 +149,11 @@ h3{
     color:  #EBEBEB;
 }
 
+.bordesDetail{
+    border-radius: 36px 36px 0px 0px;
+    border: 1px solid #0f030f;
+}
+
 .thecrownScreen{
     width: 100%;
     height: 100%;
@@ -183,9 +186,9 @@ li{
 }
 
 .favoritesection{
-    border: solid #0f030f;
     width: 50%;
     border-radius: 36px 36px 0px 0px;
+    border: 1px solid #0f030f;
 }
 
 .genresectionPeliculas{
@@ -245,6 +248,49 @@ li{
     font-size: medium;
 }
 
+
+.sectionSearch{
+    padding-left: 30px;
+    border-radius: 36px 36px 0px 0px;
+    border: 1px solid #0f030f;
+}
+
+.textoDeResultados{
+    display: flex;
+}
+
+.busquedaP1{
+    color: #B8B8B8;
+    font-weight: bold;
+}
+
+.busquedaP2{
+    margin-left: 15px;
+    color: #B8B8B8;
+    text-decoration: underline;
+}
+
+.elemtosDeRespuesta{
+    display: flex;
+    padding: 0%;
+    justify-content: space-around;
+}
+
+.busquedaSimilar{
+    color: #B8B8B8;
+    font-weight: bold;
+}
+
+.irArribaCaja{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.irArriba{
+    text-decoration: underline;
+    color: #B8B8B8;
+}
 
 footer{
     background-color: transparent;
