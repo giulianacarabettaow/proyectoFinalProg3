@@ -235,7 +235,8 @@ main.mainfavorite{
 }
 
 .item{
-    margin: 25px;   
+    margin: 25px;  
+    font-size: larger
 }
 section.detailGenreSection{
     font-family: 'PT Sans Narrow', sans-serif;
