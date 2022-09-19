@@ -258,10 +258,11 @@ section.detailGenreSection{
 }
 
 
-.sectionSearch{
+section.sectionSearch{
     padding-left: 30px;
     border-radius: 36px 36px 0px 0px;
     border: 1px solid #0f030f;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .textoDeResultados{
