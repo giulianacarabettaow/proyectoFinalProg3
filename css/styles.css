@@ -319,13 +319,28 @@ footer{
     justify-content: center;
 }
 
-
-/*/ ARRANCA EL RESPONSIVE MAX-WIDTH 1024PX/*/
-
-
-
-/*/ ARRANCA EL RESPONSIVE MAX-WIDTH 650PX/*/
-
+@media (max-width: 1024px){
+    .menuprincipal{
+        width: 100%;
+    }
+    .categories{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .placeholder{
+        padding: 0%;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    ul.elementosderespuesta{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 @media (max-width: 650px){
 
