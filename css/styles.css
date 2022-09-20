@@ -14,7 +14,11 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/*/ Agregamos propiedad "Order" para acomodar la estructura en 1024px /*/
+
 .title{
+    order: 1;
     width: 150px;
     margin:0%;
     padding:0%;
@@ -28,14 +32,19 @@ h1{
     color: #EBEBEB; 
 }
  
+/*/ Agregamos propiedad "Order" para acomodar la estructura en 1024px /*/
 
 .buscador{
+    order: 3;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*/ Agregamos propiedad "Order" para acomodar la estructura en 1024px /*/
+
 .menuprincipal{
+    order: 2;
     height: fit-content;
     width: 60%;
 }
@@ -311,3 +320,56 @@ footer{
 }
 
 
+/*/ ARRANCA EL RESPONSIVE MAX-WIDTH 1024PX/*/
+
+
+
+/*/ ARRANCA EL RESPONSIVE MAX-WIDTH 650PX/*/
+
+
+@media (max-width: 650px){
+
+    .contenedorpadre{
+        display: block;
+    }
+
+    .title{
+        width: 100%;
+    }
+
+    .menuprincipal{
+        width: 100%;
+    }
+
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.elemtosDeRespuesta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .movieyseriesdetails{
+        display: block;
+    }
+
+    .sinopsis{
+        width: 100%;
+    }
+
+    .especificaciones{
+        width: 100%;
+    }
+
+    .titleFav{
+        height: 60px;
+    }
+
+    .favoritesection{
+        width: 50%;
+        border-radius: 36px 36px 0px 0px;
+        border: 2px solid #40434E;
+    }
+}
