@@ -379,6 +379,7 @@ footer{
         flex-wrap: wrap;
     }
 
+    /*/Para que se ponga una caja abajo en esta medida de pantalla/*/
     .movieyseriesdetails{
         display: block;
     }
@@ -395,6 +396,7 @@ footer{
         height: 60px;
     }
 
+        /*/ cambio de bordes de esa sección/*/
     .favoritesection{
         width: 50%;
         border-radius: 36px 36px 0px 0px;
