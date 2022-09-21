@@ -11,12 +11,10 @@ header{
 }
 .contenedorpadre{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 /*/ Agregamos propiedad "Order" para acomodar la estructura en 1024px /*/
-
 .title{
     order: 1;
     width: 150px;
@@ -33,7 +31,6 @@ h1{
 }
  
 /*/ Agregamos propiedad "Order" para acomodar la estructura en 1024px /*/
-
 .buscador{
     order: 3;
     display: flex;
@@ -91,8 +88,9 @@ ul{
     display: flex;
     justify-content: space-around;
     list-style: none;
-
 }
+
+
 img{
     height: 230px;
 }
@@ -102,6 +100,8 @@ li{
 .section1{
     border-radius: 37px 37px 37px 37px;
     border: 2px solid #0f030f;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .nombreDelElemento{
@@ -113,9 +113,12 @@ h3{
     font-family: 'PT Sans Narrow', sans-serif;
     
 }
-/*/esta clase esta mal escrita y repetida, está dos clases arriba. Podemos unificar/*/
-section.section1{
+.section1{
     font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.article{
+    width: 100%;
 }
 
 .mainhead{
@@ -224,10 +227,12 @@ main.mainfavorite{
     background-image: url(https://cdn.pixabay.com/photo/2016/04/14/13/06/landscape-1328858_960_720.jpg);
 }
 
+
 .favoritelist{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 0%;
 }
 
 .genrelist{
@@ -319,27 +324,35 @@ footer{
     justify-content: center;
 }
 
+
+/*/ ARRANCA EL RESPONSIVE/*/
+
 @media (max-width: 1024px){
     .menuprincipal{
         width: 100%;
     }
+
     .categories{
-        display:flex;
+        display: flex;
         flex-wrap: wrap;
     }
+
     .placeholder{
         padding: 0%;
     }
+
     .form{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
-    ul.elementosderespuesta{
+
+    ul.elemtosDeRespuesta {
         display: flex;
         flex-wrap: wrap;
     }
+
 }
 
 @media (max-width: 650px){
