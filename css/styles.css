@@ -168,6 +168,8 @@ h3{
 }
 
 .bordesDetail{
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 36px 36px 0px 0px;
     border: 1px solid #0f030f;   
 }
@@ -347,6 +349,9 @@ footer{
         display: flex;
         flex-wrap: wrap;
     }
+    .categories li{
+    max-width: 150px;
+    }
 
 
     .categories li{
@@ -399,11 +404,18 @@ footer{
 
     /*/Para que se ponga una caja abajo en esta medida de pantalla/*/
     .movieyseriesdetails{
-        display: block;
-    }
+        display: inline-block;
 
+<<<<<<< HEAD
     
 
+=======
+    }
+    .movieyseriesdetails h3{
+        display: flex;
+        justify-content: center;
+    }
+>>>>>>> baf086ae247e907dc571662563dd4cc369de4162
     .sinopsis{
         width: 100%;
     }
