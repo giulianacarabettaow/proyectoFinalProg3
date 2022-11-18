@@ -169,7 +169,7 @@ h3{
 
 .bordesDetail{
     border-radius: 36px 36px 0px 0px;
-    border: 1px solid #0f030f;
+    border: 1px solid #0f030f;   
 }
 
 .thecrownScreen{
@@ -401,6 +401,8 @@ footer{
     .movieyseriesdetails{
         display: block;
     }
+
+    
 
     .sinopsis{
         width: 100%;
