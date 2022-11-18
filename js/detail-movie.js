@@ -20,7 +20,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         let detalles=`
         <article class='movieyseriesdetails'>
         <h3>${data.original_title}</h3>
-        <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
+        <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
         <p>Reseña: ${data.overview}</p> 
         <ul>
         <li> ${data.release_date}  </li>
