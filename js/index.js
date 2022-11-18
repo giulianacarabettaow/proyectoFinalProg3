@@ -13,9 +13,12 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=ba0b591fbb4dcbf21e7a27
     for(let i=0; i < 8; i++){
         infoMasVistas +=`
         <li>
+        <a href='./detail-movie.html?id=${data.results[i].id}'>
         <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt=''/>
+        </a>
         <p>Name: ${data.results[i].original_title}</p>
-        </li>`
+        </li>
+        `
     }
     categoriesMasVistas.innerHTML= infoMasVistas
 })
@@ -65,6 +68,7 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=c71f5b75c8e3c6372967558
             infoSMasValoradas +=`
             <li>
             <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt=''/>
+            <p> Name: ${data.results[i].original_name}</p>
             </li>`
         }
         categoriesSeriesMasValoradas.innerHTML= infoSMasValoradas
