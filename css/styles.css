@@ -324,6 +324,9 @@ footer{
     justify-content: center;
 }
 
+.categories li{
+    max-width: 150px;
+    }
 
 /*/ ARRANCA EL RESPONSIVE/*/
 
@@ -337,9 +340,9 @@ footer{
         flex-wrap: wrap;
     }
 
-.categories l{
+    .categories li{
     max-width: 150px;
-}
+    }
 
     .placeholder{
         padding: 0%;
@@ -377,7 +380,6 @@ footer{
         display: flex;
         flex-wrap: wrap;
     }
-
 
 
     ul.elemtosDeRespuesta {
