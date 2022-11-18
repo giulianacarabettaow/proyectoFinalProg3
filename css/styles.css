@@ -337,6 +337,7 @@ footer{
         flex-wrap: wrap;
     }
 
+
     .placeholder{
         padding: 0%;
     }
@@ -373,6 +374,8 @@ footer{
         display: flex;
         flex-wrap: wrap;
     }
+
+
 
     ul.elemtosDeRespuesta {
         display: flex;
