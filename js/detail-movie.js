@@ -7,6 +7,7 @@ let detailMovies=document.querySelector(".bordesDetail");
     detailMovies.style.display="flex";
     detailMovies.style.flexWrap="wrap";
 
+let titulo=document.querySelector('.tituloMovie')
 
 
 fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
@@ -16,17 +17,16 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
     .then(function(data){
         console.log(data)
-
+        titulo.innerText=data.original_title
         let detalles=`
-        <article class='movieyseriesdetails'>
-        <h3>${data.original_title}</h3>
+        
         <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
+        
         <p>Reseña: ${data.overview}</p> 
-        <ul>
-        <li> ${data.release_date}  </li>
-        <li> ${data.vote_average} </li>
+        <ul class="ulDetail">
+        <li>Fecha de lanzamiento:${data.release_date}  </li>
+        <li>Calificación: ${data.vote_average} </li>
         </ul>
-        </article>
         `
         detailMovies.innerHTML=detalles
     })

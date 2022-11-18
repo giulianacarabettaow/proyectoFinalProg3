@@ -84,6 +84,12 @@ h2{
     margin-left: 25px
 }
 
+.tituloMovie{
+    text-decoration: none;
+    color: #C2C2C2;
+    margin-left: 25px
+}
+
 ul{
     display: flex;
     justify-content: space-around;
@@ -320,23 +326,35 @@ section.sectionSearch{
     color: #B8B8B8;
 }
 
-footer{
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-}
-.themoviedb{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    max-width: 5px;
-}
-.tmdblogo{
-    max-width: fit-content;
-}
-.categories li{
+    footer{
+         background-color: transparent;
+        display: flex;
+        justify-content: center;
+    }
+    .themoviedb{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        max-width: 5px;
+    }
+    .tmdblogo{
+        max-width: fit-content;
+    }
+    .categories li{
     max-width: 150px;
     }
+
+    .cabeceraDetalle{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mainhead{
+        display: flex;
+        align-items: center;
+    }
+
+    .tituloMovie{
+        display: inline-block;
 
 /*/ ARRANCA EL RESPONSIVE/*/
 
@@ -375,6 +393,18 @@ footer{
         flex-wrap: wrap;
     }
 
+    .cabeceraDetalle{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mainhead{
+        display: flex;
+        align-items: center;
+    }
+
+    .tituloMovie{
+        display: inline-block;
+
 }
 
 @media (max-width: 650px){
@@ -406,16 +436,12 @@ footer{
     .movieyseriesdetails{
         display: inline-block;
 
-<<<<<<< HEAD
-    
-
-=======
     }
     .movieyseriesdetails h3{
         display: flex;
         justify-content: center;
     }
->>>>>>> baf086ae247e907dc571662563dd4cc369de4162
+ 
     .sinopsis{
         width: 100%;
     }
@@ -434,4 +460,17 @@ footer{
         border-radius: 36px 36px 0px 0px;
         border: 2px solid #40434E;
     }
-}
+
+    .cabeceraDetalle{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ulDetail{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0%;
+        width:100%;
+    }
+   
+    }
