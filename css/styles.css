@@ -323,7 +323,15 @@ footer{
     display: flex;
     justify-content: center;
 }
-
+.themoviedb{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 5px;
+}
+.tmdblogo{
+    max-width: fit-content;
+}
 .categories li{
     max-width: 150px;
     }
