@@ -1,6 +1,5 @@
 let query= location.search
-    let ObjQuery= new URLSearchParams(query)
-    let id=ObjQuery.get('id')
+     let id=ObjQuery.get('id')
     console.log(id)
 
 let detailMovies=document.querySelector(".bordesDetail");
@@ -8,7 +7,6 @@ let detailMovies=document.querySelector(".bordesDetail");
     detailMovies.style.flexWrap="wrap";
 
 let titulo=document.querySelector('.tituloMovie')
-
 
 
 fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
@@ -28,11 +26,12 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         <ul class="ulDetail">
         <li>Fecha de lanzamiento:${data.release_date}</li>
         <li>Calificación: ${data.vote_average} </li>
-        
         <li>Duración: ${data.runtime} minutos </li>
         </ul>
         `
         detailMovies.innerHTML=detalles
+
+
     })
 
     .catch(function(error){
@@ -41,18 +40,30 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
     
 
 
-   let ulGenero=document.querySelector(".genero")
+   let SecGenero=document.querySelector("genero")
 
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
-        .then(function(response){
-            return response.json()
+
+   fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+   .then(function(response){
+       return response.json()
         })
-
+        
         .then(function(data){
             console.log(data)
             console.log(data.genres)
+            
+            let ListaGenero=''
+            
+            for (let i=0;i>data.genres.length;i++)
 
+            ListaGenero+= `${data.genres[i].name}`
+            SecGenero.innerHTML=ListaGenero
         })
+
+        .catch(function(error){
+            console.log("Error: " + error);
+        })
+        
 
 
 
@@ -72,22 +83,15 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         })
         .then(function(data){
             console.log(data)
-            console.log(data)
-
+        
 
             let provider= ''
-            fetch('https://www.themoviedb.org/movie/882598-smile/watch?locale=US')
-            .then(function(response){
-                return response.json()
-            })
-            .then(function(data){
-                console.log(data)
                 for (let i=0; i> data.results.length; i++){
                     infoGenres += `
                     <li> Encontrala en: ${data.results[i]}</li>
                     `
                 }
 
-            })
-            
         })
+            
+        
