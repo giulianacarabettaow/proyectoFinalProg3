@@ -1,8 +1,9 @@
-let query= location.search
-     let id=ObjQuery.get('id')
+    let query= location.search
+    let ObjQuery= new URLSearchParams(query)
+    let id=ObjQuery.get('id')
     console.log(id)
 
-let detailMovies=document.querySelector(".bordesDetail");
+let detailMovies=document.querySelector(".detalles");
     detailMovies.style.display="flex";
     detailMovies.style.flexWrap="wrap";
 
@@ -40,7 +41,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
     
 
 
-   let SecGenero=document.querySelector("genero")
+  let SecGenero=document.querySelector(".detallesGen")
 
 
    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
@@ -53,10 +54,11 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
             console.log(data.genres)
             
             let ListaGenero=''
-            
-            for (let i=0;i>data.genres.length;i++)
+            let genero=data.genres
 
-            ListaGenero+= `${data.genres[i].name}`
+            for (let i=0;i<data.genres.length;i++)
+            genero=data.genres[i].name
+            ListaGenero+= `<ul><li>${genero}</li></ul>`
             SecGenero.innerHTML=ListaGenero
         })
 
@@ -75,7 +77,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
 
 
-    
+    /*
     fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c71f5b75c8e3c6372967558c16ff597f`)
         .then(function(response){
         return response.json()
@@ -92,4 +94,6 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
             })
             
-        })
+           */
+          
+
