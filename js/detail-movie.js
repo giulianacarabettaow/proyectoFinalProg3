@@ -56,5 +56,27 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
 
 
+        for (let i=0;i>data.results.length; i++){
+        
+        infoGenres += `
+        <li>Géneros: ${data.results[i].genres}</li>
+        `
+    }
+        genres.innerHTML=infoGenres
+    
+    
+    .catch(function(error){
+        console.log("Error: " + error);
+    })
 
+    
+    fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+        .then(function(response){
+        return response.json()
+        })
+        .then(function(data){
+            console.log(data)
+            
+            let provider= ''
 
+        })
