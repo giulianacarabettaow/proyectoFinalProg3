@@ -41,36 +41,48 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
     
 
 
-  let SecGenero=document.querySelector(".detallesGen")
+  let ulGenero=document.querySelector(".detallesGen")
 
+  fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data.genres)
 
-   fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
-   .then(function(response){
-       return response.json()
+        let liGenero= ' '
+
+        for(let i=0; i<data.genres.length;i++){
+            renderizado=data.genres[i].name
+            liGenero+= `<li>${renderizado}</li>`
+            
+            ulGenero.innerHTML=liGenero
+        }
+
         })
         
-        .then(function(data){
-            console.log(data)
-            console.log(data.genres)
-            
-            let ListaGenero=''
-            let genero=data.genres
-
-            for (let i=0;i<data.genres.length;i++)
-            genero=data.genres[i].name
-            ListaGenero+= `<ul><li>${genero}</li></ul>`
-            SecGenero.innerHTML=ListaGenero
-        })
-
-        .catch(function(error){
-            console.log("Error: " + error);
-        })
+    
+    .catch(function(error){
+        console.log("Error: " + error);
+    })
 
 
 
+    let ulProvider=document.querySelector(".provider") 
 
+    fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        let provider=''
+        for(let i=0;i<data.results.US.flatrate.length; i++){
+            provider += `<li><img src=https://image.tmdb.org/t/p/w500/${data.results.US.flatrate[i].logo_path} ></li>`
 
-
+            ulProvider.innerHTML=provider
+        }
+    })
 
 
 
