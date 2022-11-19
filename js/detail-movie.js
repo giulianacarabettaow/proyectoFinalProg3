@@ -82,8 +82,9 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
             ulProvider.innerHTML=provider
         }
+        console.log(data.results.US.flatrate)
     })
-
+    
 
 
 
