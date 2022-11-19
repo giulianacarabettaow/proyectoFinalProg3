@@ -24,7 +24,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         let detalles=`
         <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
         
-        <p>Sinpsis: ${data.overview}</p> 
+        <p>Sinopsis: ${data.overview}</p> 
         <ul class="ulDetail">
         <li>Fecha de lanzamiento:${data.release_date}</li>
         <li>Calificación: ${data.vote_average} </li>
@@ -60,19 +60,17 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         return response.json()
         })
         .then(function(data){
-            console.log(data)
-            console.log(data.providers)
-
-            let provider= ''
-            fetch('https://www.themoviedb.org/movie/882598-smile/watch?locale=US')
+            console.log(data);
+        })
+        fetch('https://www.themoviedb.org/movie/882598-smile/watch?locale=US')
             .then(function(response){
                 return response.json()
             })
             .then(function(data){
                 console.log(data)
                 for (let i=0; i> data.results.length; i++){
-                    provider += `<li> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
+                    provider += `<li class= "provider"> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
                 }
+                
                 provider.innerHTML= provider
             })
-        })
