@@ -54,17 +54,6 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
         })
 
-
-
-
-
-
-
-
-
-
-
-
     
     fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c71f5b75c8e3c6372967558c16ff597f`)
         .then(function(response){
@@ -72,8 +61,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         })
         .then(function(data){
             console.log(data)
-            console.log(data)
-
+            console.log(data.providers)
 
             let provider= ''
             fetch('https://www.themoviedb.org/movie/882598-smile/watch?locale=US')
@@ -83,11 +71,8 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
             .then(function(data){
                 console.log(data)
                 for (let i=0; i> data.results.length; i++){
-                    infoGenres += `
-                    <li> Encontrala en: ${data.results[i]}</li>
-                    `
+                    provider += `<li> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
                 }
-
+                provider.innerHTML= provider
             })
-            
         })
