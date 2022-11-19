@@ -63,7 +63,6 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         .catch(function(error){
             console.log("Error: " + error);
         })
-        
 
 
 
@@ -83,15 +82,14 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         })
         .then(function(data){
             console.log(data)
-        
+            console.log(data)
+
 
             let provider= ''
                 for (let i=0; i> data.results.length; i++){
-                    infoGenres += `
-                    <li> Encontrala en: ${data.results[i]}</li>
-                    `
+                    provider += `<li> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
                 }
 
-        })
+            })
             
-        
+        })

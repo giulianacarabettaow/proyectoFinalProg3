@@ -22,10 +22,6 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=ba0b591fbb4dcbf21e7a27
     }
     categoriesMasVistas.innerHTML= infoMasVistas
 })
-.catch(function(error){
-    console.log("Error: " + error);
-})
-
 let categoriesMasValoradas=document.querySelector(".categories.masvaloradas");
     categoriesMasValoradas.style.display="flex";
     categoriesMasValoradas.style.flexWrap="wrap";
