@@ -354,7 +354,7 @@ section.sectionSearch{
     }
 
     .tituloMovie{
-        display: inline-block;
+        display: inline-block;}
 
 /*/ ARRANCA EL RESPONSIVE/*/
 
@@ -405,6 +405,7 @@ section.sectionSearch{
     .tituloMovie{
         display: inline-block;
 
+}
 }
 
 @media (max-width: 650px){
