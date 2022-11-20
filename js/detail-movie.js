@@ -40,7 +40,6 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
             }
         }
         let detalles=`
-        <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
         <button class='botonfavoritos' >${textoInicial}</button>
         <p class="sinopsis">Sinopsis: ${data.overview}</p> 
         <ul class="ulDetail">
@@ -51,7 +50,18 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         `
         detailMovies.innerHTML=detalles
         let btnFavs= document.querySelector('.botonfavoritos')
-        btnFavs.addEventListener('click', function(){})
+        btnFavs.addEventListener('click', function(){
+            let favoritos= getStorage()
+            let estaMiPelicula = favoritos.includes (data.id)
+
+            if(estaMiPelicula){
+                removeFavorite(data.id, favoritos)
+                e.target.innerText= 'Añadir a favoritos' 
+            }else{
+                addFavorite(data.id, favoritos)
+                e.target.innerText= 'Quitar de favoritos' 
+            }
+        })
 
     })
 
@@ -68,8 +78,8 @@ function addFavorite(id, storage){
 function removeFavorite (id, storage){
     let position = storage.indexOf (id)
     storage.splice(position, 1)
-    let storageToString = JSON.stringfy(storage)
-    localStorage.setItem('botonfavoritos', storageToString)
+    let storageToString = JSON.stringfy (storage)
+    localStorage.setItem('favoritos', storageToString)
 }
 
   let ulGenero=document.querySelector(".detallesGen")
