@@ -10,8 +10,9 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=c71f5b75c8e3c637296
         console.log(data)
         let genrelistM=''
         for(i=0;i<data.genres.length;i++){
-            genrelistM+=`//*<a href="./detail-genres.html?id=${data.genres[i].id}*//
+            genrelistM+=`<a href="./detail-genres.html?id=${data.genres[i].id}>
             <li>${data.genres[i].name}
+            </a>
             `
             moviesGenres.innerHTML=genrelistM
         }

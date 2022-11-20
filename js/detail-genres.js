@@ -22,8 +22,9 @@ fetch(`${endpoint}${api_key}&query=${keyword}`)
         for(let i=0;i<data.results.length;i++){
             let genreListaM=''
             genreListaM+=`<ul><li>${data.results[i].original_title}</li>
-                            <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">
-                        </ul>`
+                            <li><img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"><li>
+                            </ul>
+                        `
         detailGenresList.innerHTML=genreListaM
         }
     })
