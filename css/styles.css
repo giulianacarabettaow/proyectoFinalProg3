@@ -149,6 +149,10 @@ h3{
 .mainDetalleMovie {
     font-family: 'PT Sans Narrow', sans-serif;
     color:  #EBEBEB;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 36px 36px 0px 0px;
+    border: 1px solid #0f030f;   
 }
 .movieyseriesdetails{
     display: flex;
@@ -173,12 +177,6 @@ h3{
     color:  #EBEBEB;
 }
 
-.bordesDetail{
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 36px 36px 0px 0px;
-    border: 1px solid #0f030f;   
-}
 
 .bordesDetail article{
     display: inline-block;
