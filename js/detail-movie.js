@@ -40,6 +40,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
             }
         }
         let detalles=`
+        
         <button class='botonfavoritos' >${textoInicial}</button>
         <p class="sinopsis">Sinopsis: ${data.overview}</p> 
         <ul class="ulDetail">
@@ -50,7 +51,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         `
         detailMovies.innerHTML=detalles
         let btnFavs= document.querySelector('.botonfavoritos')
-        btnFavs.addEventListener('click', function(){
+        btnFavs.addEventListener('click', function(e){
             let favoritos= getStorage()
             let estaMiPelicula = favoritos.includes (data.id)
 
@@ -59,7 +60,8 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
                 e.target.innerText= 'Añadir a favoritos' 
             }else{
                 addFavorite(data.id, favoritos)
-                e.target.innerText= 'Quitar de favoritos' 
+                e.target.innerText= 'Quitar de favoritos'
+
             }
         })
 
@@ -78,7 +80,7 @@ function addFavorite(id, storage){
 function removeFavorite (id, storage){
     let position = storage.indexOf (id)
     storage.splice(position, 1)
-    let storageToString = JSON.stringfy (storage)
+    let storageToString = JSON.stringify (storage)
     localStorage.setItem('favoritos', storageToString)
 }
 
