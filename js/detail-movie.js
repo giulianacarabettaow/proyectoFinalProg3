@@ -1,6 +1,6 @@
-    let query= location.search
-    let ObjQuery= new URLSearchParams(query)
-    let id=ObjQuery.get('id')
+    let query= location.search;
+    let ObjQuery= new URLSearchParams(query);
+    let id=ObjQuery.get('id');
     console.log(id)
 
 let detailMovies=document.querySelector(".detalles");
@@ -94,13 +94,14 @@ function removeFavorite (id, storage){
         console.log(data.genres)
 
         let liGenero= ' '
-
+         
         for(let i=0; i<data.genres.length;i++){
             renderizado=data.genres[i].name
             liGenero+= `
-            
+            <a href="./detail-genres.html?idGenre=${data.genres[i].id}">
             <li>
             ${renderizado}</li>
+            </a>
             `
             
             ulGenero.innerHTML=liGenero

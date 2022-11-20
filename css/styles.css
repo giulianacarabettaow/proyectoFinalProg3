@@ -321,7 +321,13 @@ section.sectionSearch{
     text-decoration: underline;
 }
 
-.elemtosDeRespuesta{
+.elemtosDeRespuestaM{
+    display: flex;
+    padding: 0%;
+    justify-content: space-around;
+}
+
+.elemtosDeRespuestaS{
     display: flex;
     padding: 0%;
     justify-content: space-around;
