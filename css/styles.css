@@ -244,7 +244,7 @@ main.mainfavorite{
 }
 
 
-.favoritelist{
+.favs-container{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -499,7 +499,7 @@ section.sectionSearch{
     }
 
         /*/ cambio de bordes de esa sección/*/
-    .favoritesection{
+    .list-container{
         width: 50%;
         border-radius: 36px 36px 0px 0px;
         border: 2px solid #40434E;
