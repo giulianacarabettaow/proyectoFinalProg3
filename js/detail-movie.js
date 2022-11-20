@@ -92,13 +92,14 @@ function removeFavorite (id, storage){
         console.log(data.genres)
 
         let liGenero= ' '
-
+         
         for(let i=0; i<data.genres.length;i++){
             renderizado=data.genres[i].name
             liGenero+= `
-            
+            <a href="./detail-genres.html?id=${data.genres[i].id}">
             <li>
             ${renderizado}</li>
+            </a>
             `
             
             ulGenero.innerHTML=liGenero

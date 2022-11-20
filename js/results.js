@@ -9,6 +9,8 @@ let movie=location.search
 let ObjMovie= new URLSearchParams(movie)
 let keyword=ObjMovie.get('search')
 
+let searchMovie=document.querySelector(".elemtosDeRespuestaM")
+let searchSerie=document.querySelector(".elemtosDeRespuestaS")
 
 
 fetch(`${endpoint}${api_key}&query=${keyword}`)
@@ -17,7 +19,24 @@ fetch(`${endpoint}${api_key}&query=${keyword}`)
     })
     .then(function(data){
         console.log(data)
+    
+        let movieListSearch=''
+        
+        for(let i=0;i<data.results.length;i++){
+            let random=''
+            random+=`${data.results[i].media_type}
+            `
+            console.log(random)
+        }
+        
+        for(let i=0;i<data.results.length;i++){
+            movieListSearch+=`<li>${data.results[i].original_title}</li>`
+
+            searchMovie.innerHTML=movieListSearch
+        }        
+       
+
     })
-    .catch(function(errpr){
+    .catch(function(error){
         console.log(error)
     })

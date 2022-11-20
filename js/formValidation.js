@@ -13,7 +13,7 @@ function formValidation(form, input){
 
     form.addEventListener('submit', function(e){
         e.preventDefault() /*deja de tener funcionamiento habitual el form (hacer submits de la informacion)estamos evitando el submit del form*/
-        if(input.value.length<6){
+        if(input.value.length<3){
             alert('Es muy corta tu busqueda')
         }else{
             this.submit()
