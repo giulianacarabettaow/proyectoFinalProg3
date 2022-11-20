@@ -167,10 +167,11 @@ h3{
 }
 .interstellarscreen{
     width: 100%;
-    height: 100%;
+    height: 50%;
     border-radius: 36px 36px 0px 0px;
     border: 0px solid #0f030f;
 }
+
 
 .mainDetalleSerie{
     font-family: 'PT Sans Narrow', sans-serif;
@@ -179,7 +180,12 @@ h3{
 
 
 .bordesDetail article{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style: none;
 }
 
 .thecrownScreen{
@@ -226,7 +232,7 @@ main.mainfavorite{
     width: 50%;
     border-radius: 36px 36px 0px 0px;
     background-color: #361B30;
-    background-image: url(https://cdn.pixabay.com/photo/2018/04/20/01/07/spaceship-3334826_960_720.jpggit );
+    
 }
 
 .genresectionSeries{
@@ -245,13 +251,22 @@ main.mainfavorite{
     padding: 0%;
 }
 
-.genrelist{
+.genrelistM{
     display: flex;
     flex-direction: column  ;
     padding: 0%;
     list-style: circle;
     margin: 0%;
-    
+}
+
+
+
+.genrelistS{
+    display: flex;
+    flex-direction: column  ;
+    padding: 0%;
+    list-style: circle;
+    margin: 0%;
 }
 
 .genrearticle{
@@ -357,6 +372,25 @@ section.sectionSearch{
 
     .tituloMovie{
         display: inline-block;}
+
+    .provider{ 
+        display: flex;
+        justify-content: space-evenly;
+        margin: 15px;
+    }
+
+    .providerImg{
+        border-radius: 15px;
+    }
+
+    .detallesGen{
+        display: flex;
+        justify-content: space-around;
+        margin: 15px;
+        font-size: large;
+    }
+
+    
 
 /*/ ARRANCA EL RESPONSIVE/*/
 

@@ -9,6 +9,8 @@ let detailMovies=document.querySelector(".detalles");
 
 let titulo=document.querySelector('.tituloMovie')
 
+let imagen=document.querySelector(".imagenDetalle")
+
 
 fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
     .then(function(response){
@@ -18,7 +20,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
     .then(function(data){
         console.log(data)
         titulo.innerText=data.original_title
-        
+        imagen.innerHTML=`<img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>`
         /*let favoritos=getStorage
         let estaMiPelicula = favoritos.includes(data.id)
         let textoInicial = ''
@@ -38,9 +40,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
             }
         }*/
         let detalles=`
-        <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
-        /////*<button>${textoInicial}</button>*//////
-        <p>Sinopsis: ${data.overview}</p> 
+        <p class="sinopsis">Sinopsis: ${data.overview}</p> 
         <ul class="ulDetail">
         <li>Fecha de lanzamiento:${data.release_date}</li>
         <li>Calificación: ${data.vote_average} </li>
@@ -70,8 +70,11 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
         for(let i=0; i<data.genres.length;i++){
             renderizado=data.genres[i].name
-            liGenero+= `<li><a href='./genres.html?id=${data.genres[i].id}>
-            ${renderizado}</a></li>`
+            liGenero+= `
+            
+            <li>
+            ${renderizado}</li>
+            `
             
             ulGenero.innerHTML=liGenero
         }
@@ -95,7 +98,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         console.log(data)
         let provider=''
         for(let i=0;i<data.results.US.flatrate.length; i++){
-            provider += `<li><img src=https://image.tmdb.org/t/p/w500/${data.results.US.flatrate[i].logo_path} ></li>`
+            provider += `<li><img class="providerImg" src=https://image.tmdb.org/t/p/w500/${data.results.US.flatrate[i].logo_path} ></li>`
 
             ulProvider.innerHTML=provider
         }
