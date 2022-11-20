@@ -54,7 +54,8 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
         for(let i=0; i<data.genres.length;i++){
             renderizado=data.genres[i].name
-            liGenero+= `<li>${renderizado}</li>`
+            liGenero+= `<li><a href='./genres.html?id=${data.genres[i].id}>
+            ${renderizado}</a></li>`
             
             ulGenero.innerHTML=liGenero
         }
