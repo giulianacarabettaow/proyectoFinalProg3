@@ -1,10 +1,10 @@
 function formValidation(form, input){
     input.addEventListener('focus',function(){
-        console.log('Me estan enfocando')
+        console.log('Me clickearon')
     })
 
     input.addEventListener('blur', function(){
-        console.log('me dejaron de enfocar, capaz me escribieron algo')
+        console.log('me dejaron de clickear, capaz me escribieron algo')
     })
 
     input.addEventListener('input',function(){

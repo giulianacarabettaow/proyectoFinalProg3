@@ -1,5 +1,3 @@
-
-
 let endpoint='https://api.themoviedb.org/3/search/multi'
 let api_key='?api_key=c71f5b75c8e3c6372967558c16ff597f'
 /*'keyword' es lo que busca el usuario (searchParams.*/
@@ -20,22 +18,18 @@ fetch(`${endpoint}${api_key}&query=${keyword}`)
     .then(function(data){
         console.log(data)
     
+
         let movieListSearch=''
+
         
         for(let i=0;i<data.results.length;i++){
-            let random=''
-            random+=`${data.results[i].media_type}
-            `
-            console.log(random)
-        }
-        
-        for(let i=0;i<data.results.length;i++){
-            movieListSearch+=`<li>${data.results[i].original_title}</li>`
+            movieListSearch+=`<li><p>${data.results[i].original_title}</p>
+            <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"
+            </li>`
 
             searchMovie.innerHTML=movieListSearch
         }        
-       
-
+        
     })
     .catch(function(error){
         console.log(error)

@@ -14,18 +14,22 @@ let detailGenresSelection=document.querySelector(".subTitleGenre");
 let detailGenresList=document.querySelector(".favoritelist");
 
 
-fetch(`${endpoint}${api_key}&query=${keyword}`)
+fetch(`${endpoint}${api_key}&with_genres=${keyword}`)
     .then(function(response){
         return response.json()
     })
     .then(function(data){
         console.log(data)
         for(let i=0;i<data.results.length;i++){
-            let genreListaM=''
-            genreListaM+=`<ul><li>${data.results[i].original_title}</li>
+            
+           
+            detailGenresList.innerHTML+=`<ul><li>${data.results[i].original_title}</li>
                             <li><img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"><li>
                             </ul>
                         `
-        detailGenresList.innerHTML=genreListaM
         }
+    })
+
+    .catch(function(error){
+        console.log("Error: " + error);
     })
