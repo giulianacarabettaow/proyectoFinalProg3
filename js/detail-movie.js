@@ -19,7 +19,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         console.log(data)
         titulo.innerText=data.original_title
         
-        /*let favoritos=getStorage
+        let favoritos=getStorage()
         let estaMiPelicula = favoritos.includes(data.id)
         let textoInicial = ''
         if (estaMiPelicula){
@@ -36,10 +36,10 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
             } else {
                 return []
             }
-        }*/
+        }
         let detalles=`
         <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
-        /////*<button>${textoInicial}</button>*//////
+        <button class='botonfavoritos' >${textoInicial}</button>
         <p>Sinopsis: ${data.overview}</p> 
         <ul class="ulDetail">
         <li>Fecha de lanzamiento:${data.release_date}</li>
@@ -48,6 +48,8 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         </ul>
         `
         detailMovies.innerHTML=detalles
+        let btnFavs= document.querySelector('.botonfavoritos')
+        btnFavs.addEventListener('click', function(){})
 
     })
 
@@ -55,7 +57,18 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         console.log("Error: " + error);
     })
 
+function addFavorite(id, storage){
+    storage.push(id)
+    let storageToString= JSON.stringify(storage)
+    localStorage.setItem('favoritos', storageToString)
+}
 
+function removeFavorite (id, storage){
+    let position = storage.indexOf (id)
+    storage.splice(position, 1)
+    let storageToString = JSON.stringfy(storage)
+    localStorage.setItem('botonfavoritos', storageToString)
+}
 
   let ulGenero=document.querySelector(".detallesGen")
 
