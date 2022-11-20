@@ -19,11 +19,28 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         console.log(data)
         titulo.innerText=data.original_title
         
-
+        /*let favoritos=getStorage
+        let estaMiPelicula = favoritos.includes(data.id)
+        let textoInicial = ''
+        if (estaMiPelicula){
+            textoInicial = "Sacar de Favoritos"
+        } else{
+            textoInicial = 'Añadir a Favoritos'
+        }
+        
+        function getStorage(){
+            let storage = localStorage.getItem('favoritos')
+    
+            if(storage !== null && storage !== undefined){
+                return JSON.parse(storage)
+            } else {
+                return []
+            }
+        }*/
         let detalles=`
         <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
-        
-        <p>Sinpsis: ${data.overview}</p> 
+        /////*<button>${textoInicial}</button>*//////
+        <p>Sinopsis: ${data.overview}</p> 
         <ul class="ulDetail">
         <li>Fecha de lanzamiento:${data.release_date}</li>
         <li>Calificación: ${data.vote_average} </li>
@@ -32,13 +49,12 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         `
         detailMovies.innerHTML=detalles
 
-
     })
 
     .catch(function(error){
         console.log("Error: " + error);
     })
-    
+
 
 
   let ulGenero=document.querySelector(".detallesGen")
@@ -97,17 +113,28 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
         return response.json()
         })
         .then(function(data){
+
+            console.log(data);
+        })
+        fetch('https://www.themoviedb.org/movie/882598-smile/watch?locale=US')
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                console.log(data)
+
             console.log(data)
             console.log(data)
 
 
             let provider= ''
-                for (let i=0; i> data.results.length; i++){
-                    provider += `<li> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
-                }
 
+                for (let i=0; i> data.results.length; i++){
+                    provider += `<li class= "provider"> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
+                }
+                
+                provider.innerHTML= provider
             })
             
            */
-          
-
+        
