@@ -1,3 +1,4 @@
+
 let categoriesMasVistas=document.querySelector(".categories.masvistas");
     categoriesMasVistas.style.display="flex";
     categoriesMasVistas.style.flexWrap="wrap";
@@ -22,6 +23,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=ba0b591fbb4dcbf21e7a27
     }
     categoriesMasVistas.innerHTML= infoMasVistas
 })
+
 let categoriesMasValoradas=document.querySelector(".categories.masvaloradas");
     categoriesMasValoradas.style.display="flex";
     categoriesMasValoradas.style.flexWrap="wrap";
@@ -48,8 +50,6 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=c71f5b75c8e3c6372967
     console.log("Error: " + error);
 })
 
-
-
 let categoriesSeriesMasValoradas=document.querySelector(".categories.seriesmasvaloradas")
 categoriesSeriesMasValoradas.style.display="flex";
 categoriesSeriesMasValoradas.style.flexWrap="wrap"
@@ -66,7 +66,9 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=c71f5b75c8e3c6372967558
         for(let i=0; i < 8; i++){
             infoSMasValoradas +=`
             <li>
-            <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt=''/>
+            <a href='./detail-movie.html?id=${data.results[i].id}'>
+            <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='' />
+            </a>
             <p> Name: ${data.results[i].original_name}</p>
             </li>`
         }
