@@ -3,6 +3,7 @@
     let id=ObjQuery.get('id');
     console.log(id)
 
+
 let detailMovies=document.querySelector(".detalles");
     detailMovies.style.display="flex";
     detailMovies.style.flexWrap="wrap";
@@ -64,9 +65,10 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c71f5b75c8e3c6372967558c
 
             }
         })
-
+     
+        
     })
-
+        
     .catch(function(error){
         console.log("Error: " + error);
     })
@@ -102,8 +104,7 @@ function removeFavorite (id, storage){
             <li>
             ${renderizado}</li>
             </a>
-            `
-            
+            `  
             ulGenero.innerHTML=liGenero
         }
 
@@ -132,40 +133,52 @@ function removeFavorite (id, storage){
         }
         console.log(data.results.US.flatrate)
     })
+        .catch(function(error){
+        console.log("Error: " + error);
+    })
+
     
 
+let btn=document.querySelector('.search')
 
+btn.addEventListener('click',function(){
+    let recomendaciones=document.getElementById("recomendaciones")
+    if (btn.innerTEXT=="Ver recomendaciones"){
 
-
-
-    /*
-    fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+        
+        let endpointRecomendaciones=`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=c71f5b75c8e3c6372967558c16ff597f&language=en-US&page=1`
+        fetch(endpointRecomendaciones)
         .then(function(response){
-        return response.json()
+            return(response)
         })
         .then(function(data){
+            console.log(data)
 
-            console.log(data);
+            let info=''
+
+            for(let i=0;i<6;i++){
+                info+=`
+                <li>
+                <a href='./detail-movie.html?id=${data.results[i].id}'>
+                <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='' />
+                </a>
+                </li>
+                `
+            }
+
+            recomendaciones.innerHTML=info
         })
-        fetch('https://www.themoviedb.org/movie/882598-smile/watch?locale=US')
-            .then(function(response){
-                return response.json()
-            })
-            .then(function(data){
-                console.log(data)
 
-            console.log(data)
-            console.log(data)
+        .catch(function(error){
+            console.log("Error: " + error);
+        })
+    
+        this.innerTEXT="Dejar de ver recomendaciones"
+    }
+    else{
+        let info=''
+        recomendaciones.innerHTML=info
 
-
-            let provider= ''
-
-                for (let i=0; i> data.results.length; i++){
-                    provider += `<li class= "provider"> Encontrala en: ${data.results.US.flatrate[i].logo_path}</li>`
-                }
-                
-                provider.innerHTML= provider
-            })
-            
-           */
-        
+        this.innerTEXT="Ver recomendaciones"
+    }
+})
