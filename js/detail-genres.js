@@ -12,6 +12,8 @@ let keyword=id;
 let detailGenres=document.querySelector(".titleDetailGenre h3");
 let detailGenresSelection=document.querySelector(".subTitleGenre");
 let detailGenresList=document.querySelector(".favoritelist");
+    detailGenresList.style.display="flex";
+    detailGenresList.style.flexWrap="wrap";
 
 
 fetch(`${endpoint}${api_key}&with_genres=${keyword}`)
@@ -33,3 +35,4 @@ fetch(`${endpoint}${api_key}&with_genres=${keyword}`)
     .catch(function(error){
         console.log("Error: " + error);
     })
+
