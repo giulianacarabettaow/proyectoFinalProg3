@@ -358,11 +358,11 @@ section.sectionSearch{
     .themoviedb{
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
-        max-width: 5px;
+        justify-content: right;
     }
     .tmdblogo{
-        max-width: fit-content;
+        height: 230px;
+        width: 100px;
     }
     .categories li{
     max-width: 150px;
