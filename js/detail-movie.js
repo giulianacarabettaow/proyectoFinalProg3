@@ -137,12 +137,13 @@ function removeFavorite (id, storage){
         console.log("Error: " + error);
     })
 
-    
+//recomendaciones
 
-let btn=document.querySelector('.search')
+let btn=document.querySelector('.recomendaciones')
+let btnRecomendados= 
 
-btn.addEventListener('click',function(){
-    let recomendaciones=document.getElementById("recomendaciones")
+btn.addEventListener('click',function(e){
+    let recomendaciones=document.getElementById("")
     if (btn.innerTEXT=="Ver recomendaciones"){
 
         
@@ -159,9 +160,9 @@ btn.addEventListener('click',function(){
             for(let i=0;i<6;i++){
                 info+=`
                 <li>
-                <a href='./detail-movie.html?id=${data.results[i].id}'>
+               
                 <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='' />
-                </a>
+                
                 </li>
                 `
             }

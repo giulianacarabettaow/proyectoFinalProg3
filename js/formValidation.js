@@ -15,10 +15,11 @@ function formValidation(form, input){
         e.preventDefault() /*deja de tener funcionamiento habitual el form (hacer submits de la informacion)estamos evitando el submit del form*/
         if(input.value.length<3){
             alert('Es muy corta tu busqueda')
+
         }else{
             this.submit()
         }
-    })
+    })  
 }
 
 window.addEventListener('load', function(){
