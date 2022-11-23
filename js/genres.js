@@ -41,3 +41,8 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=c71f5b75c8e3c637296
         .catch(function(error){
             console.log("Error: " + error);
         })
+
+        //no funcionó, revisar
+        let detailGenres=document.querySelector('.favoritelist');
+        detailGenres.style.display="flex";
+        detailGenres.style.flexWrap="wrap";
