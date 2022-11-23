@@ -111,6 +111,13 @@ li{
     flex-wrap: wrap;
 }
 
+.favoritelist{
+    
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 .nombreDelElemento{
     margin: 0%;
 }

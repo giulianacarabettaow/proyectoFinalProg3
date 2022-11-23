@@ -9,10 +9,13 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=c71f5b75c8e3c637296
     .then(function(data){
         console.log(data)
         let genrelistM=''
-        for(i=0;i<data.genres.length;i++){
-            genrelistM+=`<a href="./detail-genres.html?id=${data.genres[i].id}>
-            <li>${data.genres[i].name}
-            </a>
+        for(let i=0; i < data.genres.length; i++){
+            genrelistM +=`
+            <ul> 
+            
+        <li> <a href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a></li> 
+            
+            </ul>
             `
             moviesGenres.innerHTML=genrelistM
         }
@@ -31,16 +34,22 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=c71f5b75c8e3c637296
         .then(function(data){
             console.log(data)
             let genrelistS=''
-            for(let i=0;i<data.genres.length;i++){
-                genrelistS+=`<li>${data.genres[i].name}</li>
+            for(let i=0; i < data.genres.length; i++){
+                genrelistS +=`
+                <ul> 
+                
+            <li> <a href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a></li> 
+                
+                </ul>
                 `
                 seriesGenres.innerHTML=genrelistS
             }
         })
-
+    
         .catch(function(error){
             console.log("Error: " + error);
         })
-
+    
+      
     
        
