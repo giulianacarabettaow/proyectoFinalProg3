@@ -30,15 +30,15 @@ function getFavsStorage(){
     }
 }
 
-function getAllFavsAndPrint (arrFavs){
-    for(let i=0 ; i< arrFavs.length ; i++){
+function getAllFavsAndPrint (arrFavs){ 
+    for(let i=0 ; i< arrFavs.length ; i++){ 
         fetch(`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
         .then(function(resp){
-            return resp.json()
+            return resp.json() 
         })
         .then(function(data){ 
             
-            console.log(data)
+            console.log(data) 
             container.innerHTML += `
             <li>
                 <article>

@@ -9,6 +9,10 @@
 header{
     width: 100%;
 }
+.footer{
+    display: block;
+    width: 100%;
+}
 .contenedorpadre{
     display: flex;
     justify-content: space-between;
