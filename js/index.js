@@ -35,7 +35,10 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=c71f5b75c8e3c6372967
     console.log(data);
     for(let i=0; i<8; i++){
         infoMasValoradas += `
-        <li> <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='' />
+        <li>
+        <a href="./detail-movie.html?id=${data.results[i].id}">
+        <img src= 'https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}' alt='' />
+        </a>
         <p> Name: ${data.results[i].original_title}</p>
         </li>`
     }

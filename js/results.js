@@ -8,8 +8,7 @@ let ObjMovie= new URLSearchParams(movie)
 let keyword=ObjMovie.get('search')
 
 let searchMovie=document.querySelector(".elemtosDeRespuestaM")
-let searchSerie=document.querySelector(".elemtosDeRespuestaS")
-
+let textoInput=document.querySelector(".busquedaP1")
 
 fetch(`${endpoint}${api_key}&query=${keyword}`)
     .then(function(response){
@@ -18,7 +17,6 @@ fetch(`${endpoint}${api_key}&query=${keyword}`)
     .then(function(data){
         console.log(data)
     
-
         let movieListSearch=''
 
         
