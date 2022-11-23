@@ -30,7 +30,9 @@ fetch(`${endpoint}${api_key}&with_genres=${keyword}`)
                         <ul>
                        
                             <li>
+                            <a href="./detail-movie.html?id=${data.results[i].id}">
                             <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}">
+                            </a>
                             <p>${data.results[i].original_title} </p>
                             <li>
                             
