@@ -43,8 +43,6 @@ function getAllFavsAndPrint (arrFavs){
             <li>
                 <article>
                     <img class='interstellarscreen' src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
-                
-                    <a href='./detail-movie.html?id=${data.id}'>
                     <p>${data.title}</p>
                     </a>
                 </article>

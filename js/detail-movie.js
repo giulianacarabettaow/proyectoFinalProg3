@@ -136,3 +136,5 @@ function removeFavorite (id, storage){
         .catch(function(error){
         console.log("Error: " + error);
     })
+
+
